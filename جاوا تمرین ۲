@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class CalculateSalary {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of hours worked: ");
+        double hoursWorked = input.nextDouble();
+
+        System.out.print("Enter the hourly wage: ");
+        double hourlyWage = input.nextDouble();
+
+        double salary = hoursWorked * hourlyWage;
+        double tax = salary * 0.10;
+        double netSalary = salary - tax;
+
+        System.out.println("Gross Salary: $" + salary);
+        System.out.println("Tax Deduction (10%): $" + tax);
+        System.out.println("Net Salary: $" + netSalary);
