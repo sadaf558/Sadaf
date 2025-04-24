@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class BookPriceCalculator {
+
+    // Method to calculate the final price after discount
+    public static double calculateFinalPrice(double originalPrice, double discountRate) {
+        double discountAmount = originalPrice * (discountRate / 100);
+        return originalPrice - discountAmount;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Read the original price of the book and the discount rate
+        System.out.print("Enter the original price of the book: ");
+        double originalPrice = scanner.nextDouble();
+
+        System.out.print("Enter the discount rate (in percentage): ");
+        double discountRate = scanner.nextDouble();
+
+        // Calculate the final price using the method
+        double finalPrice = calculateFinalPrice(originalPrice, discountRate);
+
+        // Output the final price
+        System.out.printf("The final price of the book after discount is: %.2f\n", finalPrice);
+
+        scanner.close();
+    }
+}
