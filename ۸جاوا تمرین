@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class LandPriceCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Read length, width, and price per square meter
+        System.out.print("Enter the length of the land (in meters): ");
+        double length = scanner.nextDouble();
+
+        System.out.print("Enter the width of the land (in meters): ");
+        double width = scanner.nextDouble();
+
+        System.out.print("Enter the price per square meter: ");
+        double pricePerSquareMeter = scanner.nextDouble();
+
+        // Calculate total area and total price
+        double area = length * width;
+        double totalPrice = area * pricePerSquareMeter;
+
+        // Output the total price
+        System.out.printf("The total price of the land is: %.2f\n", totalPrice);
+
+        scanner.close();
+    }
+}
