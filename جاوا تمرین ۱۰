@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class BankAccountCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Read the initial amount and annual interest rate
+        System.out.print("Enter the amount of money in the bank account: ");
+        double initialAmount = scanner.nextDouble();
+
+        System.out.print("Enter the annual interest rate (in percentage): ");
+        double annualInterestRate = scanner.nextDouble();
+
+        // Calculate the total balance at the end of the year
+        double interestAmount = initialAmount * (annualInterestRate / 100);
+        double totalBalance = initialAmount   interestAmount;
+
+        // Output the total balance
+        System.out.printf("The total balance at the end of the year is: %.2f\n", totalBalance);
+
+        scanner.close();
+    }
+}
